@@ -1,8 +1,18 @@
 # py4e-int
- Python for Everybody - Interactive
+
+Python para todo mundo - Interativo
  
- This ebook is an interactive version of Dr. Charles Severance's book Python for Everybody.  See https://www.py4e.com/ for the original.
+Este livro é uma versão interativa do livro "Python for Everybody" de autoria
+de Dr. Charles Severance. A versão original do livro está disponível em
+https://www.py4e.com/. A versão interativa em inglês foi criada por um time
+liderado por Barbara Ericson (barbarer@umich.edu).
+
+Esta versão em português foi construída por Marco Aurélio Graciotto Silva
+(magsilva@utfpr.edu.br) para utilização na Universidade Tecnológica Federal
+do Paraná (UTFPR), em disciplinas introdutórias à programação de computadores
+para cursos de Engenharia.
  
- Copyright Creative Commons Attribution 3.0. See https://creativecommons.org/licenses/by/3.0/ 
+Copyright Creative Commons Attribution 3.0. Veja o texto completo da licença
+em https://creativecommons.org/licenses/by/3.0/ 
  
- The interactive edition was created by a team led by Barbara Ericson - barbarer@umich.edu
+
