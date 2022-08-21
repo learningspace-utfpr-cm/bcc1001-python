@@ -1,84 +1,86 @@
-The building blocks of programs
--------------------------------
+Blocos básicos de contrução de programas
+----------------------------------------
 .. index::
-    single: Input
-    single: Sequential Execution
-    single: Output
-    single: Conditional Execution
-    single: Repeated Execution
-    single: Reuse
+    single: Entrada
+    single: Execução sequencial
+    single: Saída
+    single: Execução condicional
+    single: Execução com repetição
+    single: Reutilização
 
-In the next few chapters, we will learn more about the vocabulary,
-sentence structure, paragraph structure, and story structure of Python.
-We will learn about the powerful capabilities of Python and how to
-compose those capabilities together to create useful programs.
+Nos próximos capítulos, aprenderemos mais sobre vocabulário, estrutura
+das frases, estrutura dos parágrafos e estrutura de histórias escritas
+em Python. Nós aprenderemos sobre as fantásticas capacidades do Python
+e como utilizá-las para criar programas úteis.
 
-There are some low-level conceptual patterns that we use to construct
-programs. These constructs are not just for Python programs, they are
-part of every programming language from machine language up to the
-high-level languages.
+Existem alguns conceitos e padrões básicos que nós utilizamos para
+construir programas. Esses elementos não são utilizados apenas para
+programas em Python, mas também para a maioria das linguagens de
+programação, desde aquelas de baixo nível (próximo da linguagem de
+máquina) até o nível mais alto (próximo da linguagem natural):
 
-* input
-    Get data from the "outside world". This might be reading data from a
-    file, or even some kind of sensor like a microphone or GPS. In our
-    initial programs, our input will come from the user typing data on
-    the keyboard.
+* entrada
+    Obter dados do "mundo exterior". Isto pode consistir da leitura de
+    dados de um arquivo ou de algum tipo de sensor, como um microfone
+    ou GPS. Em nossos primeiros programas, nossa entrada será obtida
+    do teclado, conforme os dados digitados pelo usuário.
 
-* output
-    Display the results of the program on a screen or store them in a
-    file or perhaps write them to a device like a speaker to play music
-    or speak text.
+* saída
+    Mostrar os resultados do programa em uma tela, armazená-lo em um
+    arquivo ou talvez enviá-lo para um dispositivo como uma caixa de
+    som, permitindo tocar uma música ou falar um texto.
 
-* sequential execution
-    Perform statements one after another in the order they are
-    encountered in the script.
+* execução sequencial
+    Executar comandos um após o outro, na ordem com que eles estão
+    no programa.
 
-* conditional execution
-    Check for certain conditions and then execute or skip a sequence of
-    statements.
+* execução condicional
+    Verificar certas condições para então decidir entre executar ou
+    pular uma sequência de comandos.
 
-* repeated execution
-    Perform some set of statements repeatedly, usually with some
-    variation.
+* execução com repetição
+    Executar uma sequência de comandos repetidamente, geralmente com uma
+    pequena variação quanto a valores considerados pelos comandos.
 
-* reuse
-    Write a set of instructions once and give them a name and then reuse
-    those instructions as needed throughout your program.
+* reutilização
+    Escrever uma sequência de comandos uma vez e dar um nome para ela,
+    permitindo reutilizar essa sequência de comandos no seu programa
+    conforme necessário e de forma mais fácil.
 
-It sounds almost too simple to be true, and of course it is never so
-simple. It is like saying that walking is simply "putting one foot in
-front of the other". The "art" of writing a program is composing and
-weaving these basic elements together many times over to produce
-something that is useful to its users.
+Parece muito simples para ser verdade e na verdade nunca foi tão simples.
+É como se disesse que andar é simplemente "colocar um pé na frente do outro".
+A "arte" de escrever um programa de computador é a combinação desses elementos
+básicos por diversas vezes para produzir algo útil para o usuário.
 
-The word counting program from the previous section directly uses all of these patterns
-except for one.
+O programa para contar palavras da seção anterior utiliza diretamente todos
+esses padrões básicos, exceto por um.
 
-.. fillintheblank:: intro-bb-fitb-CDout
+
+.. fillintheblank:: intro-bb-fitb-pendrive-out
   :practice: T
 
-  When writing content to a CD, the CD is an example of ________.
+  Quando escrevendo dados (por exemplo, músicas) para um módulo de memória USB (pendrive), o pendrive é um exemplo de ________ para um programa de computador.
 
-  - :[Oo]utput: A CD displays the results of a program when the disc is played.
-    :[Ii]nput: Not quite. Is the CD being read from or written to?
-    :.*: Try again.
+  - :[Ee]ntrada: Não exatamente. O pendrive está sendo lido ou está sendo escrito pelo programa?
+    :[Ss]aída: O aparelho de música mostrará os resultados escritos pelo programa quando o pendrive for reproduzido/tocado.
+    :.*: Tente novamente.
 
-.. fillintheblank:: intro-bb-fitb-CDin
+.. fillintheblank:: intro-bb-fitb-pendrive-in
   :practice: T
 
-  When reading content from a CD, the CD is an example of ________.
+  Quando lendo dados contidos em um pendrive, o pendrive é um exemplo de ________.
 
-  - :[Ii]nput: A CD holds information that the program reads.
-    :[Oo]utput: Not quite. Is the CD being read from or written to?
-    :.*: Try again.
+  - :[Ee]ntrada: O pendrive contém dados os quais o programa lê.
+    :[Ss]aída: Não exatamente. O pendrive está sendo lido ou escrito pelo programa de computador?
+    :.*: Tente novamente.
 
 .. dragndrop:: intro-bb-dbd-terms
   :practice: T
-  :match_1: Input|||Getting data from outside the computer.
-  :match_2: Output|||Displaying or producing the results of the program.
-  :match_3: Sequential Execution|||Performing statements one after another in the order they are encountered.
-  :match_4: Conditional Execution|||Checking for certain conditions, then executing or skipping a sequence of statements.
-  :match_5: Repeated Execution|||Performing some set of statements multiple times, typically with some variation.
-  :match_6: Reuse|||writing a set of instructions once, giving them a name, and calling those instructions as needed in the program.
+  :match_1: Entrada|||Obtenção de dados de fora do computador.
+  :match_2: Saída|||Apresentação ou produção de dados pelo programa.
+  :match_3: Execução sequencial|||Execução de comandos um após o outro, na ordem em que eles são encontrados.
+  :match_4: Execução condicional|||Verificação de certas condições para então executar ou pular uma sequência de comandos.
+  :match_5: Execução com repetição|||Execução de uma sequência de comandos várias vezes, geralmente com alguma pequena variação.
+  :match_6: Reutilização|||Escrita de uma sequência de comandos uma única vez, atribuindo-lhe um nome e então chamando esse grupo de instruções por esse nome, conforme necessário no programa.
 
-  Match each pattern with what it means for a program.
+  Associe cada padrão de construção com o que ele significa para um programa.
