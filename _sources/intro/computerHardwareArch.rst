@@ -1,116 +1,122 @@
-Computer hardware architecture
-------------------------------
+Arquitetura de hardware de um computador
+----------------------------------------
 .. index::
     single: Hardware
-    pair: Hardware; Architecture
-    single: Program
-    single: Central Processing Unit
-    single: Main Memory
-    single: Secondary Memory
-    single: Input and Output Devices
-    single: Network Connection
+    pair: Hardware; Arquitetura
+    single: Programa
+    single: Unidade central de processamento
+    single: Memória principal
+    single: Memória secundária
+    single: Dispositivos de entrada e saída
+    single: Conexão de rede
 
-Before we start learning the language we speak to give instructions to
-computers to develop software, we need to learn a small amount about how
-computers are built. If you were to take apart your computer or cell
-phone and look deep inside, you would find the following parts:
+Antes de aprendermos a linguagem que utilizamos para instruir um computador,
+nós precisamos aprender um pouco sobre como os computadores são construídos.
+Se nós desmontarmos um computador ou telefone celular e olharmos o que ele
+possui dentro, nós encontraríamos os seguintes componentes:
+
 
 .. figure:: Figures/arch.svg
     :alt: Hardware Architecture
 
 
-The high-level definitions of these parts are as follows:
+Uma definição simples para cada um desses componentes é a seguinte:
 
 
 *
-  The *Central Processing Unit* (or CPU) is the part of
-  the computer that is built to be obsessed with "what is next?" If
-  your computer is rated at 3.0 Gigahertz, it means that the CPU will
-  ask "What next?" three billion times per second. You are going to
-  have to learn how to talk fast to keep up with the CPU.
+  A *Unidade central de processamento* (UCP ou CPU, do inglês Central
+  Processing Unit) é a parte do computador que é obsecada em saber o
+  próximo comando a ser executado. Se o seu computador é dito como 
+  3,0 Gigahertz (GHz), isso significa que sua CPU perguntará qual é
+  o próximo comando três bilhões de vezes por segundo. Você aprenderá 
+  como falar rápido o suficiente para manter a CPU ocupada.
 
 *
-  The *Main Memory* is used to store information that
-  the CPU needs in a hurry. The main memory is nearly as fast as the
-  CPU. But the information stored in the main memory vanishes when the
-  computer is turned off.
+  A *memória principal* é utilizada para armazenar as informações que a CPU
+  precisa imediatamente. Ela também é conhecida por RAM (de Random Access
+  Memory ou Memória de Acesso Aleatório). A memória principal é quase tão
+  rápida quanto a CPU, porém ela esquece as informações que ela armazenou
+  assim que o computador for desligado. 
 
 *
-  The *Secondary Memory* is also used to store
-  information, but it is much slower than the main memory. The
-  advantage of the secondary memory is that it can store information
-  even when there is no power to the computer. Examples of secondary
-  memory are disk drives or flash memory (typically found in USB
-  sticks and portable music players).
+  A *memória secundária* também é utilizada para armazenar informações, mas
+  ela é muito mais lenta que a memória principal. A vantagem dela é que ela
+  pode armazenar informações mesmo quando o computador está desligado. Exemplos
+  de memória secundária são os discos rígidos rotativos (HD), discos de estado
+  sólido (SSD ou M.2) e os módulos de memória USB (pendrives).
 
 *
-  The *Input and Output Devices* are simply our screen,
-  keyboard, mouse, microphone, speaker, touchpad, etc. They are all of
-  the ways we interact with the computer.
+  Os *dispositivos de entrada e saída* são as formas com que interagimos com
+  o computador e vice-versa. Exemplos de dispositivos de entrada e saída são:
+  tela do computador, teclado, mouse, microfone, caixa de som, touchpad.
 
 *
-  These days, most computers also have a *Network
-  Connection* to retrieve information over a network. We can
-  think of the network as a very slow place to store and retrieve data
-  that might not always be "up". So in a sense, the network is a
-  slower and at times unreliable form of *Secondary
-  Memory*.
+  Atualmente, a maioria dos computadores possui também uma *conexão de rede*
+  para obter dados de uma rede de computadores (como a Internet). Nós podemos
+  pensar da rede como um local lento para armazenar e obter informações que
+  nem sempre estão disponíveis. De certa forma, uma rede funciona na prática
+  como uma *memória secundária* mais lenta e pouco confiável.
 
 .. mchoice:: intro-hardware-mc-storage
     :practice: T
-    :answer_a: Main Memory
-    :answer_b: Secondary Memory
-    :answer_c: Central Processing Unit
-    :answer_d: Input Devices
+    :answer_a: Memória principal
+    :answer_b: Memória secundária
+    :answer_c: Unidade de processamento central
+    :answer_d: Dispositivos de entrada e saída.
     :correct: b
-    :feedback_a: Information stored in the main memory vanishes when the computer is turned off.
-    :feedback_b: Correct! The secondary memory will hod information without power.
-    :feedback_c: Try again! The CPU is what does the computing.
-    :feedback_d: Try again! Input devices are other physical hardwares.
+    :feedback_a: Tente novamente. A informação armazenada na memória principal é apagada assim que o computador é desligado.
+    :feedback_b: Correto! A memória secundária manterá informação mesmo sem energia.
+    :feedback_c: Tente novamente. A CPU é quem faz a computação.
+    :feedback_d: Tente novamente. Dispositivos de entrada e saída são outros tipos de hardware, sem relação com armazenamento de dados.
 
-    Which of the following will keep information stored without a power source?
+    Qual dos seguintes componentes manterá as informações armazenadas mesmo sem uma fonte de energia?
 
-While most of the detail of how these components work is best left to
-computer builders, it helps to have some terminology so we can talk
-about these different parts as we write our programs.
 
-As a programmer, your job is to use and orchestrate each of these
-resources to solve the problem that you need to solve and analyze the
-data you get from the solution. As a programmer you will mostly be
-"talking" to the CPU and telling it what to do next. Sometimes you will
-tell the CPU to use the main memory, secondary memory, network, or the
-input/output devices.
+
+Embora seja função dos fabricantes de computador saber a maioria dos detalhes
+de como esses componentes funcionam, é útil saber um pouco da terminologia
+para que possamos trabalhar com essas diferentes partes quando escrevermos
+nossos programas.
+
+.. dragndrop:: intro-hardware-dnd-memory
+    :practice: T
+    :match_1: Memória principal|||Armazena informações rapidamente para a CPU; precisa de energia para manter os dados.
+    :match_2: Memória secundária|||Armazena informaçẽos lentamente; pode manter as informações na ausência de energia.
+    :match_3: Dispositivos de entrada e saída|||Componentes físicos que geralmente ficam fora do computador, que mostram informações ou capturam dados.
+    :match_4: Conexão de rede|||Permite que informação seja armazenada em uma rede; muito lenta.
+    :match_5: Unidade central de processamento|||Realiza efetivamente a computação e execução de programas no computador.
+
+    Associe cada termo com a sua definição.
+
+
+
+Como um programador, nosso trabalho é usar e orquestrar cada um desses
+componentes para resolver os problemas que precisamos e analisar os dados
+que obtemos da solução. Como um programador, você falará principalmente
+com a CPU, dizendo o que ela deve fazer a seguir. Algumas vezes você
+pedirá para a CPU usar a memória principal, a memória secundária, a rede
+ou os dispositivos de entrada e saída.
 
 
 .. figure:: Figures/arch2.svg
-    :alt: Where Are You?
+    :alt: Onde você está?
 
 
-You need to be the person who answers the CPU's "What next?" question.
-But it would be very uncomfortable to shrink you down to 5mm tall and
-insert you into the computer just so you could issue a command three
-billion times per second. So instead, you must write down your
-instructions in advance. We call these stored instructions a
-*program* and the act of writing these instructions down
-and getting the instructions to be correct *programming*.
+Você precisa ser a pessoa que responde à pergunta da CPU de "qual é o
+próximo comando?". Todavia, seria muito desconfortável encolhê-lo para
+uma altura de 14nm (ou menos!) e inserí-lo dentro do computador só para
+você desse o comando três bilhões de vezes por segundo. Ao invés disso,
+você escreverá os comandos previamente. Nós chamamos esses comandos
+armazenados de *programa* e o ato de escrever esses comandos corretamente
+nós chamamos de *programação*.
 
 
 .. fillintheblank:: intro-hardware-fitb-program
     :practice: T
 
-    A set of stored instructions used to direct your computer's central processing unit is called a ________.
+    Um grupo de comandos armazenados utilizado para direcionar a unidade central de processamento de seu computador é chamado de ________.
 
-    - :[Pp]rogram: A program holds the instructions that answer the CPU's "What next" question.
-      :[Pp]rogramming: Programming is the process of creating and editing these instructions.
-      :.*: Try again!
-
-.. dragndrop:: intro-hardware-dnd-memory
-    :practice: T
-    :feedback: How is memory stored?
-    :match_1: Main Memory|||Stores information quickly for the CPU; needs power for storage.
-    :match_2: Secondary Memory|||Stores information slowly; can save information without power.
-    :match_3: Input/Output Devices|||Physical aspects beyond the internal computer.
-    :match_4: Network Connection|||Allows information to be stored on a network; very slow.
-    :match_5: Central Processing Unit|||Does the actual computing and executing of programs in the computer.
-
-    Match each term with its definition.
+    - :[Pp]rograma: Um programa armazena das instruções que respondem a questão do "qual é o próximo comando?" de uma CPU.
+      :[Pp]rogramação: Programação é o processo de criar e editar esses comandos.
+      :.*: Tente novamente!
+      
