@@ -1,6 +1,6 @@
 
 =======================================
-Python for Everybody - Interactive
+Python para todo mundo - Interativo
 =======================================
 
 .. Here is were you specify the content and order of your new book.
@@ -14,16 +14,16 @@ Python for Everybody - Interactive
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
-Assignments
+Tarefas
 :::::::::::::::::
 
 .. raw:: html
 
    <ul>
-   <li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
+   <li><a href="/runestone/assignments/chooseAssignment.html">Tarefas</a></li>
    </ul>
 
-Table of Contents
+Conteúdo
 :::::::::::::::::::::::::::::::
 
 .. toctree::
@@ -53,18 +53,18 @@ Table of Contents
    database/toctree.rst
    viz/toctree.rst
 
-Acknowledgements
+Agradecimentos
 ::::::::::::::::
 
 .. toctree::
-   :caption: Acknowledgements, Contributors, License, and Preface
+   :caption: Agradecimentos, Contribuidores, Licença e Prefácio
    :maxdepth: 1
 
    ack/AA-contrib.rst
    ack/AB-copyright.rst
    ack/A0-preface.rst
 
-Indices
+Índices e Busca
 ::::::::::::::::::
 
 * :ref:`genindex`
