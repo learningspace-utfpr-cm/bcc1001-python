@@ -1,21 +1,20 @@
-Conversing with Python
-----------------------
+Conversando com o Python
+------------------------
 .. index::
-    single: Interactive Mode
+    single: Modo interativo
 
-Now that we have a word and a simple sentence that we know in Python, we
-need to know how to start a conversation with Python to test our new
-language skills.
+Agora que nós temos uma palavra e uma frase simples que nós sabemos em
+Python, nós precisamos aprender como começar uma conversa com Python para
+testar nossas novas habilidades com esta linguagem.
 
-Before you can converse with Python, you must first install the Python
-software on your computer and learn how to start Python on your
-computer. That is too much detail for this chapter so I suggest that you
-consult `www.py4e.com <http://www.py4e.com>`_ where I have detailed
-instructions and screencasts of setting up and starting Python on
-Macintosh and Windows systems. At some point, you will be in a terminal
-or command window and you will type *python* and the
-Python interpreter will start executing in interactive mode and appear
-somewhat as follows:
+Antes que você conversa com Python, você deve instalar o Python em seu
+computador e aprender a iniciá-lo. Isso é muito detalhe para tratar aqui,
+então eu sugiro que você consulta em `www.py4e.com <http://www.py4e.com>`_
+onde temos instruções detalhadas de como configurar e iniciar o Python
+em máquinas com sistemas MacOS e Windows. Em algum ponto, você chegará
+a um terminal ou janela de comandos em que você digitará *python* e então
+o interpretador Python iniciará a execução no modo interativo, aparecendo
+algo como o que segue:
 
 .. code-block:: python
 
@@ -26,134 +25,124 @@ somewhat as follows:
    >>>
 
 
-The ``>>>`` prompt is the Python interpreter's way of asking
-you, "What do you want me to do next?" Python is ready to have a
-conversation with you. All you have to know is how to speak the Python
-language.
+O ``>>>`` é a forma do interpretador Python pedir para você "qual é a próxima
+coisa que você quer que eu faça?", indicando que ele está pronto para ter uma
+conversa com você. Tudo que você precisa saber agora é falar a linguagem
+Python.
 
 .. fillintheblank:: intro-convo-fitb-prompt
   :practice: T
 
-  What symbol is the Python interpreter's prompt for "What do you want me to do next?"
+  Qual é o símbolo do interpretador Python que pede "qual é a próxima coisa que você quer que eu faça?"
 
-  - :>>>: Correct! >>> is the prompt from the Python interpreter.
-    :.*: Try again. Open your Python interpreter using the command "python" and see what you are prompted with.
+  - :>>>: Correto! >>> é o prompt do interpretador Python.
+    :.*: Tente novamente. Abra o seu interpretador Python com o comando "python" e veja com o que você é solicitado a interagir.
 
 
-Let's say for example that you did not know even the simplest Python
-language words or sentences. You might want to use the standard line
-that astronauts use when they land on a faraway planet and try to speak
-with the inhabitants of the planet:
+Digamos que você não sabe as palavras mais simples ou frases da linguagem
+Python. Você pode desejar usar a famosa frase que astronautas utilizam
+quando pousam em um planeta distante e tentam conversar com os nativos:
 
 .. code-block:: python
 
-   >>> I come in peace, please take me to your leader
+   >>> Eu venho em paz, por favor leve-me ao seu líder
    File "<stdin>", line 1
-     I come in peace, please take me to your leader
+     Eu venho em paz, por favor leve-me ao seu líder
           ^
    SyntaxError: invalid syntax
    >>>
 
 
-This is not going so well. Unless you think of something quickly, the
-inhabitants of the planet are likely to stab you with their spears, put
-you on a spit, roast you over a fire, and eat you for dinner.
+Isto não está indo bem. A menos que você pense em algo rapidamente, os
+habitantes do planeta podem atacá-lo e serví-lo de janta. Por sorte, você
+trouxe uma cópia deste livro e você abre exatamente neste ponto do texto
+e tenta novamente:
 
-Luckily you brought a copy of this book on your travels, and you thumb
-to this very page and try again:
 
 .. code-block:: python
 
-   >>> print('Hello world!')
-   Hello world!
+   >>> print('Olá! Eu venho em paz')
+   Olá! Eu venho em paz
 
 
-This is looking much better, so you try to communicate some more:
+Isto está parecendo muito melhor, então você tenta se comunicar um pouco mais:
 
 .. code-block:: python
 
-   >>> print('You must be the legendary god that comes from the sky')
-   You must be the legendary god that comes from the sky
-   >>> print('We have been waiting for you for a long time')
-   We have been waiting for you for a long time
-   >>> print('Our legend says you will be very tasty with mustard')
-   Our legend says you will be very tasty with mustard
-   >>> print 'We will have a feast tonight unless you say
+   >>> print('Você deve ser o deus lendário que veio do céu')
+   Você deve ser o deus lendário que veio do céu
+   >>> print('Nós estávamos esperando por você por todo esse tempo')
+   Nós estávamos esperando por você por todo esse tempo
+   >>> print('Nossa lenda diz que você deve ser muito saboroso com mostarda')
+   Nossa lenda diz que você deve ser muito saborodo com mostarda
+   >>> print 'Nós teremos um banquete hoje a menos que você diga
    File "<stdin>", line 1
-     print 'We will have a feast tonight unless you say
+     print 'Nós teremos um banquete hoje a menos que você diga'
                                                       ^
    SyntaxError: Missing parentheses in call to 'print'
    >>>
 
 
-The conversation was going so well for a while and then you made the
-tiniest mistake using the Python language and Python brought the spears
-back out.
+A conversa estava indo tão bem e então você fez um pequeno erro usando a linguagem
+Python, podendo trazer tudo a perder novamente.
 
 .. mchoice:: intro-convo-mc-print
   :practice: T
-  :answer_a: commas
-  :answer_b: brackets
-  :answer_c: semicolons
-  :answer_d: parentheses
+  :answer_a: vírgulas
+  :answer_b: colchetes
+  :answer_c: ponto e vírgula
+  :answer_d: parênteses
   :correct: d
-  :feedback_a: What is needed to complete a print statement?
-  :feedback_b: What symbols are needed around the text to print?
-  :feedback_c: Try again.
-  :feedback_d: Correct! Parentheses are needed around statements that are being printed.
+  :feedback_a: Qual é o símbolo necessário para completar o comando print?
+  :feedback_b: Quais são os símbolos necessários ao redor do texto a ser impresso?
+  :feedback_c: Tente novamente.
+  :feedback_d: Correto! Parênteses são necessários ao redor do conteúdo a ser impresso pelo comando.
 
-  What is missing from this print statement?
+  O que está faltando no comando 'print'?
 
   ::
 
-    print 'We will have a feast tonight unless you say'
+    print('Nós teremos um banquete hoje a menos que você diga')
 
-At this point, you should also realize that while Python is amazingly
-complex and powerful and very picky about the syntax you use to
-communicate with it, Python is *not* intelligent. You are
-really just having a conversation with yourself, but using proper
-syntax.
+Neste ponto, você percebe o quanto o Python é complexo, poderoso e muito exigente
+(chato) quanto à sintaxe com que você deve ser comunicar com ele. Python *não* é
+inteligente. De fato, você está tendo uma conversa consigo mesmo, mas com uma 
+sintaxe adequada.
 
-In a sense, when you use a program written by someone else the
-conversation is between you and those other programmers with Python
-acting as an intermediary. Python is a way for the creators of programs
-to express how the conversation is supposed to proceed. And in just a
-few more chapters, you will be one of those programmers using Python to
-talk to the users of your program.
+Nesse sentido, quando você usa o programa escrito por outra pessoa, a
+conversa é entre você e algum outro programador (que escreveu o outro programa),
+sendo o Python apenas um intermediário. Assim, Python é uma maneira com que
+criadores de programas de computador expressam como a conversa deve proceder.
+Após alguns capítulos de aprendizado, você será um desses programadores que
+usam Python para conversar com os usuários de seu programa.
 
-Before we leave our first conversation with the Python interpreter, you
-should probably know the proper way to say "good-bye" when interacting
-with the inhabitants of Planet Python:
+Antes de deixarmos para trás essa primeira conversa com o interpretador Python,
+você deve aprender a maneira adequada de dizer "tchau" quando interagindo com
+os habilidantes do Planeta Python:
 
 .. code-block:: python
 
-   >>> good-bye
+   >>> tchau
    Traceback (most recent call last):
    File "<stdin>", line 1, in <module>
-   NameError: name 'good' is not defined
-   >>> if you don't mind, I need to leave
+   NameError: name 'tchau' is not defined
+   >>> se você não se importa, eu preciso ir embora
    File "<stdin>", line 1
-     if you don't mind, I need to leave
+     se você não se importa, eu preciso ir embora
               ^
    SyntaxError: invalid syntax
    >>> quit()
 
 
-You will notice that the error is different for the first two incorrect
-attempts. The second error is different because *if* is a
-reserved word and Python saw the reserved word and thought we were
-trying to say something but got the syntax of the sentence wrong.
-
-The proper way to say "good-bye" to Python is to enter
-*quit()* at the interactive chevron ``>>>``
-prompt. It would have probably taken you quite a while to guess that
-one, so having a book handy probably will turn out to be helpful.
+Você perceberá que o erro é diferente para cada uma das tentativas. A maneira
+correta de encerrar a conversa com o Python, quando no modo interativo do
+interpretador, é usando o comando *quit()*. 
 
 
 .. fillintheblank:: intro-convo-fitb-quit
   :practice: T
 
-  What do you type to leave the Python interpreter?
+  O que você precisa digitar para sair do interpretador Python?
 
-  - :quit(\(\))*: Correct!
-    :.*: Try again.
+  - :quit(\(\))*: Correto!
+    :.*: Tente novamente.
