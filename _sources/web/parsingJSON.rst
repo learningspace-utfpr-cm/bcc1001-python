@@ -1,36 +1,24 @@
-Parsing JSON
-------------
+What is JSON?
+----------------
+JSON stands for JavaScript Object Notation.  It is a format for sharing data.
+You can read a JSON string from a file or from a URL and convert it into a Python dictionary or list.
+You can also convert a Python dictionary or list into a JSON string.
+
+Converting a JSON String into a Python Object
+===============================================
+
 .. index::
     single: JSON
 
-We construct our JSON by nesting dictionaries and lists as
-needed. In this example, we represent a list of users where each user is
-a set of key-value pairs (i.e., a dictionary). So we have a list of
-dictionaries.
-
-.. mchoice:: webParsingJSON_MC_construct
-    :practice: T
-    :answer_a: dictionaries and strings
-    :answer_b: dictionaries and lists
-    :answer_c: strings and lists
-    :correct: b
-    :feedback_a: Dictionaries are used in JSON, but strings only contain one element, so they are not as useful.
-    :feedback_b: JSON is constructed by nesting dictionaries and lists as needed.
-    :feedback_c: Lists are used in JSON, but strings only contain one element, so they are not as useful.
-
-    JSON is constructed nesting which pair of variable types?
-
 In the following program, we use the built-in ``json``
-library to parse the JSON and read through the data. Compare this
-closely to the equivalent XML data and code on the previous page. The JSON has less
-detail, so we must know in advance that we are getting a list and that
-the list is of users and each user is a set of key-value pairs. The JSON
-is more succinct (an advantage) but also is less self-describing (a
-disadvantage).
+library to parse the JSON string and return a Python list of dictionaries.
 
-.. activecode:: webParsingJSON
-    :caption: Parsing JSON
+.. activecode:: web-parse-json-to-python
+    :caption: Converting a JSON string to a Python object
 
+    What do you think this code will print?  Run it to see what it actually
+    prints.
+    ~~~~
     import json
 
     data = '''
@@ -41,7 +29,7 @@ disadvantage).
       } ,
       { "id" : "009",
        "x" : "7",
-       "name" : "Brent"
+       "name" : "Brenda"
       }
     ]'''
 
@@ -53,47 +41,78 @@ disadvantage).
         print('Id', item['id'])
         print('Attribute', item['x'])
 
-If you compare the code to extract data from the parsed JSON and XML you
-will see that what we get from ``json.loads()`` is a Python
-list which we traverse with a ``for`` loop, and each item
-within that list is a Python dictionary. Once the JSON has been parsed,
-we can use the Python index operator to extract the various bits of data
-for each user. We don't have to use the JSON library to dig through the
-parsed JSON, since the returned data is simply native Python structures.
+.. fillintheblank:: net_parse_xml_which_method
 
-.. fillintheblank:: webParsingJSON_fill
+    Which method of the json library is used to convert a JSON string into a Python object?
 
-    Which Python operator is used to extract pieces of data from each user?
+    - :loads: The loads method takes a JSON string and returns a list or dictionary.
+      :.*: Which method was called in the code above?
 
-    - :[Ii]ndex: The index operator is used to grab bits of data for each user once the JSON has been parsed.
-      :.*: Try again.
+Here is another example.  Run the code to see what it does.
 
-The output of this program is exactly the same as the XML version from earlier.
+.. activecode:: web-parse-json-to-python-dictionary
+    :caption: Converting a JSON string to a Python object
 
-.. code-block::
+    What do you think this code will print?  Run it to see what it actually
+    prints.
+    ~~~~
+    import json
+    data = '''{"employees": [{"name": "Lena", "title": "sales person"},
+                         {"name": "Paru", "title": "manager"},
+                         {"name": "Tyra", "title": "vice president"}]}'''
+    d1 = json.loads(data)
+    people_list = d1["employees"]
+    print(len(people_list))
+    for person in people_list:
+        print(person.get('name'))
 
-    User count: 2
-    Name Chuck
-    Id 001
-    Attribute 2
-    Name Brent
-    Id 009
-    Attribute 7
+.. fillintheblank:: net_json_what_type_returned_data
 
-In general, there is an industry trend away from XML and towards JSON
-for web services. Because the JSON is simpler and more directly maps to
-native data structures we already have in programming languages, the
-parsing and data extraction code is usually simpler and more direct when
-using JSON. But XML is more self-descriptive than JSON and so there are
-some applications where XML retains an advantage. For example, most word
-processors store documents internally using XML rather than JSON.
+    What type of thing (class name) is ``data`` in the code above?
 
-.. mchoice:: webParsingJSON_MC_tf
+    - :str|string: It is an object of the str (string) class
+      :.*: Try again
+
+.. fillintheblank:: net_json_what_type_returned_d1
+
+    What type of thing (class name) is ``d1`` in the code above?
+
+    - :dict|dictionary: It is an object of the dict (dictionary) class.
+      :.*: Try again
+
+.. mchoice:: webParsingJSON_MC_construct
     :practice: T
-    :answer_a: True
-    :answer_b: False
+    :answer_a: dictionary and string
+    :answer_b: dictionary and list
+    :answer_c: string and list
     :correct: b
-    :feedback_a: Try again!
-    :feedback_b: XML is more self-descriptive than JSON, but JSON is simpler and more directly maps to native data structures.
+    :feedback_a: Dictionaries are used in JSON, but strings only contain one element, so they are not as useful.
+    :feedback_b: JSON is constructed by nesting dictionaries and lists as needed.
+    :feedback_c: Lists are used in JSON, but strings only contain one element, so they are not as useful.
 
-    True or False? JSON is more self-descriptive than XML.
+    Once you convert a JSON string to Python what are the two possible types for the Python object?
+
+Converting a Python object into a JSON string
+===============================================
+
+You can also convert a Python list or dictionary to a JSON string.
+
+.. activecode:: web-parse-json-to-string
+    :caption: Convert Python object to JSON string
+
+    What do you think this code will print?  Run it to see what it actually
+    prints.
+    ~~~~
+    import json
+    d_list = [{'Year': 2022, 'First': 'Barb', 'Last': 'Ericson'}, {'Year': 2018, 'First': 'Mark', 'Last': 'Guzdial'}]
+    print(json.dumps(d_list))
+    d = d_list[0]
+    print(json.dumps(d))
+
+
+.. fillintheblank:: net_parse_json_convert_to_string_fitb
+
+    Which method of the json library is used to convert a Python object to a JSON string?
+
+    - :dumps: The dumps method takes a Python object and returns a JSON string.
+      :.*: Which method was called in the code above?

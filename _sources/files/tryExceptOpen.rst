@@ -42,7 +42,6 @@ software or paying our salary to write the software. So the QA team is
 the programmer's best friend.
 
 .. mchoice:: file-try-mc-qa
-    :practice: T
 
     Which of the following is something that the Quality Assurance (QT) team does (pick all that apply)?
 
@@ -76,6 +75,7 @@ when the ``open`` fails as follows (creating a new file *search7.py*):
     for line in fhand:
         if line.startswith('Subject:'):
             count = count + 1
+    fhand.close()
     print('There were', count, 'subject lines in', fname)
 
 The ``exit`` function terminates the program. It is a function
@@ -113,7 +113,6 @@ always interested in just making something work, we also want our
 solution to be elegant and to be appreciated as elegant by our peers.
 
 .. fillintheblank:: file-try-fitb-python
-    :practice: T
 
     The term |blank| describes something done the "Python way".
 

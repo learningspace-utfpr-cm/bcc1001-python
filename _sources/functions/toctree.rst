@@ -44,4 +44,6 @@ Functions
    functions_tups_dicts_exercises.rst
    functions_tups_dicts_mixedupcode.rst
    functions_tups_dicts_writecode.rst
+   func_Str_Cond.rst
+   funcWithListsAndLoops.rst
 

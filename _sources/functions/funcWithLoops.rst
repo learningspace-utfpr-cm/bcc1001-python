@@ -31,7 +31,6 @@ The For-Each Loop
 A for-each loop in Python will loop though the items in a list starting with the item at index 0, then index 1, and so on till the last item in the list.
 
 .. fillintheblank:: funct_ll_fitb_count_odd_first
-    :practice: T
 
     What is the first thing that will be printed by the code below?
 
@@ -39,7 +38,6 @@ A for-each loop in Python will loop though the items in a list starting with the
       :.*: Run the code to check.
 
 .. fillintheblank:: funct_ll_fitb_count_odd_last
-    :practice: T
 
     What is the last thing that will be printed by the code below?
 
@@ -72,7 +70,6 @@ A for-each loop in Python will loop though the items in a list starting with the
     main()
 
 .. fillintheblank:: funct_ll_fitb_count_odd_var
-    :practice: T
 
     What is the name of the variable that can be used to refer to the current list item in the for-each loop?
 
@@ -82,6 +79,7 @@ A for-each loop in Python will loop though the items in a list starting with the
 .. parsonsprob:: func_ll_pp_total_even
    :numbered: left
    :adaptive:
+   :order: 2, 5, 6, 1, 0, 7, 4, 3, 8, 9
    :practice: T
 
    Drag the blocks from the left and put them in the correct order on the right to define a function ``total_even`` that returns the total of the even numbers in the passed list.
@@ -106,43 +104,6 @@ A for-each loop in Python will loop though the items in a list starting with the
    =====
        Return total #paired
 
-.. activecode:: fuct_ac_ll_sum67_fix
-   :autograde: unittest
-
-   Fix the ``sum67`` function below that takes a list and should return the total of the items in the list except for all the numbers between a 6 and 7 (inclusive).   For example, ``sum67([1,2])`` should return ``3`` and ``sum67([2, 6, 8, 7, 2])`` should return ``4``.
-   ~~~~
-   def sum67(nums):
-       total = 0               # initialize the total
-       found_6 = True          # initialize a Boolean flag
-       for num in nums:        # loop through the items in a list
-           if found_6 && num == 7:
-               found_6 = False # set the Boolean flag to false
-           elif num = 6:
-               found_6 = True  # set the Boolean flag to True
-           elif found_6:
-               continue        # go back to the top of the loop
-           else:
-               total += num    # add num to total
-           return total        # return the total
-
-   ====
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-       def testOne(self):
-           self.assertEqual(sum67([1,2]), 3, 'sum67([1,2])')
-           self.assertEqual(sum67([2, 6, 8, 7, 2]), 4, 'sum67([2, 6, 8, 7, 2])')
-           self.assertEqual(sum67([6, 2, 7]), 0, 'sum67([6, 2, 7])')
-           self.assertEqual(sum67([6, 2, 7, 5]), 5, 'sum67([6, 2, 7, 5])')
-           self.assertEqual(sum67([7, 2, 6]), 9, 'sum67([7, 2, 6])')
-           self.assertEqual(sum67([4, 6, 7]), 4, 'sum67([4, 6, 7])')
-           self.assertEqual(sum67([]), 0, 'sum67([])')
-
-   myTests().main()
-
-
-
 Range and For
 ============================
 
@@ -150,7 +111,6 @@ How do you loop just a set number of times?  You can use
 the built-in ``range`` function to do this.
 
 .. fillintheblank:: funct_ll_fitb_print_to_first
-    :practice: T
 
     What is first value that that following code prints?
 
@@ -158,7 +118,6 @@ the built-in ``range`` function to do this.
       :.*: Run the code and see.
 
 .. fillintheblank:: funct_ll_fitb_print_to_last
-    :practice: T
 
     What is last value that that following code prints?
 
@@ -189,7 +148,6 @@ the built-in ``range`` function to do this.
    The ``range(end)`` function will produce values from 0 to end - 1.
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_first
-    :practice: T
 
     What is first value that that following code prints?
 
@@ -197,7 +155,6 @@ the built-in ``range`` function to do this.
       :.*: Run the code and see.
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_last
-    :practice: T
 
     What is last value that that following code prints?
 
@@ -229,7 +186,6 @@ the built-in ``range`` function to do this.
    The function range(start, end) will return a range object (an iterator) that allows you to loop from start (inclusive) to end (exclusive).
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_by_first
-    :practice: T
 
     What is first value that that following code prints?
 
@@ -237,7 +193,6 @@ the built-in ``range`` function to do this.
       :.*: Run the code and see.
 
 .. fillintheblank:: funct_ll_fitb_print_from_to_by_last
-    :practice: T
 
     What is last value that that following code prints?
 
@@ -266,6 +221,7 @@ the built-in ``range`` function to do this.
 .. parsonsprob:: func_ll_pp_total_at_odd_indices
    :numbered: left
    :adaptive:
+   :order: 7, 3, 4, 1, 0, 6, 5, 2
    :practice: T
 
    Drag the blocks from the left and put them in the correct order on the right to define a function ``total_at_odd_indices`` that returns the total of the numbers at odd indices in the passed list.
@@ -310,7 +266,6 @@ A while loop repeats while a Boolean expression is True.
     main()
 
 .. fillintheblank:: funct_ll_fitb_while_break
-    :practice: T
 
     What keyword is used to stop the loop in the above code?
 

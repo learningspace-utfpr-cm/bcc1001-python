@@ -81,14 +81,6 @@ A list holds items in order and you can get the value at an index, just like you
     - :\[\]|\]\[: Square brackets are used at the start and end of a list.
       :.*: Look at the parameter to the function call in the code above.
 
-.. fillintheblank:: funct_ll_first_index
-    :practice: T
-
-    What index is used to get the first item in a list?
-
-    - :0: The first item in a list is at index 0.
-      :.*: Try again!
-
 .. fillintheblank:: funct_ll_last_index
     :practice: T
 
@@ -98,6 +90,7 @@ A list holds items in order and you can get the value at an index, just like you
       :.*: Try again!
 
 .. mchoice:: list_neg_2_result
+    :practice: T
     :answer_a: hi
     :answer_b: 3
     :answer_c: buy
@@ -173,18 +166,6 @@ There are several built-in functions in Python that work on lists.
 
    myTests().main()
 
-.. dragndrop:: func_ll_dnd_funct
-    :practice: T
-    :feedback: Read the chapter on functions and try again.
-    :match_1: len|||Returns the length of an object (the number of items in the list).
-    :match_2: sum|||Returns the total of the values in the list.
-    :match_3: min|||Returns the minimum value in the list.
-    :match_4: max|||Returns the maximum value in the list.
-
-    Drag each built-in function name to what it does.
-
-
-
 List Methods
 ===============
 
@@ -229,6 +210,7 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
 
 
 .. mchoice:: funct_list_append_pop_predict
+    :practice: T
     :answer_a: [2, 5, 7, 3]
     :answer_b: [5, 7, 3]
     :answer_c: [2, 7, 3]
@@ -285,6 +267,7 @@ Lists are objects of the ``list`` class and have methods that operate on list ob
 
 
 .. mchoice:: funct_list_result_of_reverse
+    :practice: T
     :answer_a: None
     :answer_b: [2, 5, 7]
     :answer_c: [7, 5, 2]]
@@ -360,16 +343,13 @@ You can use the slice operator[n:m] with lists to get a new list just like you c
     - :0: If the start index isn't specified it is 0.
       :.*: Run the code above to check.
 
-.. shortanswer:: list_def_end_index_sa
-
-   In ``[2:]`` what is the end index?
-
 .. note::
 
    The slice operator always returns a new object.  It doesn't change the current object (list or string).
 
 
 .. mchoice:: funct_list_neg_slice
+    :practice: T
     :answer_a: [2, 3, 4, 5]
     :answer_b: [2, 3, 4]
     :answer_c: [3, 4, 5]

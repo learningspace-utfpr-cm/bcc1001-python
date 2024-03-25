@@ -19,6 +19,7 @@ This is quite simple to do by reading the file name from the user using
     for line in fhand:
         if line.startswith('Subject:'):
             count = count + 1
+    fhand.close()
     print('There were', count, 'subject lines in', fname)
 
 We read the file name from the user and place it in a variable named
@@ -35,7 +36,7 @@ repeatedly on different files.
      Enter the file name: mbox-short.txt
    There were 27 subject lines in mbox-short.txt
 
-.. parsonsprob:: file-user-pp-input
+.. parsonsprob:: file-user-pp-input-v2
     :adaptive:
     :practice: T
     :numbered: left
@@ -54,6 +55,7 @@ repeatedly on different files.
     =====
         count = count + 1
     =====
+    fhand.close()
     print('There were', count, 'lines in', fname)
 
 Before peeking at the next section, take a look at the above program and
@@ -62,21 +64,17 @@ friendly user do that would cause our nice little program to
 ungracefully exit with a traceback, making us look not-so-cool in the
 eyes of our users?"
 
-.. datafile:: mbox-mini.txt
-    :fromfile: mbox-short.txt
-    :hide:
-
 .. tabbed:: fileOpenInput
 
     .. tab:: Question
 
-        The file ``mbox-mini.txt`` is loaded on this page. There are five errors in the code below.
-        Fix the code to ask a user for a file, open "mbox-mini.txt", and count the lines that start with
+        There are five errors in the code below.
+        Fix the code to ask a user for a file, open "mbox-short.txt", and count the lines that start with
         ``Received:``.
 
         .. activecode:: fileOpenInputq
+            :datafile: mbox-short.txt
             :autograde: unittest
-            :practice: T
 
             count = 1
             fname = input('Enter the file name: '
@@ -84,6 +82,7 @@ eyes of our users?"
             for line in fhand:
                 if line.endswith('Received:'):
                 count = count + 1
+            fhand.close()
             print('There were', count, 'lines starting with "Received:" in the file', fname)
 
             =====
@@ -107,4 +106,5 @@ eyes of our users?"
                 if line.startswith('Received:'):
                 # Check at the beginning of the line, not the end
                     count = count + 1 # Correct indentation.
+            fhand.close()
             print('There were', count, 'lines starting with "Received:" in the file', fname)

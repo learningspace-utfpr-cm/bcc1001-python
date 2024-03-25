@@ -41,7 +41,7 @@ code necessary to implement the application.
     :answer_b: True
     :correct: b
     :feedback_a: Try again!
-    :feedback_b: By including access to services provided by other programs in the functionality of a program, you are using an SOA approach. 
+    :feedback_b: By including access to services provided by other programs in the functionality of a program, you are using an SOA approach.
 
     True or False? A service-oriented architecture makes use of other applications' services.
 
@@ -82,3 +82,53 @@ the web, we call these *web services*.
     :feedback_d: SOA allows the owners of data to set rules about the use of their data.
 
     Which of the following is **not** an advantage of a service oriented architecture?
+
+Getting JSON Data From an API
+===============================
+
+There is a listing of free APIs that you can use
+at https://github.com/public-apis/public-apis
+
+One of the free APIs has dog facts.  You can get a dog fact by going to the
+URL: https://dog-api.kinduff.com/api/facts.
+Try entering that in a browser window.  You can also use Python to the get data
+from an API using a URL as shown below.
+
+.. activecode:: web-api-get-dog-fact
+    :language: python3
+    :caption: Get a dog fact from an API
+
+    import requests
+    import json
+
+    # get the data
+    response = requests.get('https://dog-api.kinduff.com/api/facts')
+    data = response.text
+    in_dict = json.loads(data)
+    print(in_dict.get("facts"))
+
+
+Using a Dictionary for URL Parameters
+=======================================
+
+To add parameters to a URL you can just add them to the URL string as shown above (``?number=2``) but spaces in
+strings need to be replaced.  An easier way to add parameters to a URL is to
+create a dictionary
+with all the parameter names and values and then pass the dictionary to the
+``requests.get`` after the URL as shown below.
+
+.. activecode:: web-api-get-dog-fact-with-parms-dict
+    :language: python3
+    :caption: Get a dog fact from an api with a dictionary with parameters
+
+    import requests
+    import json
+
+    # get the data
+    parms = {'number': 2}
+    response = requests.get('https://dog-api.kinduff.com/api/facts', parms)
+    data = response.text
+    in_dict = json.loads(data)
+    fact_list = in_dict.get("facts")
+    for fact in fact_list:
+        print(fact)

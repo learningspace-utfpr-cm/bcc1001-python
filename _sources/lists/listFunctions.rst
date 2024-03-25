@@ -31,8 +31,8 @@ etc.) work with lists of strings and other types that can be comparable.
     :answer_a: True
     :answer_b: False
     :correct: b
-    :feedback_a: The max and len functions can work on any list.
-    :feedback_b: The max and len functions can work on any list, but the sum function can only work on lists made of numbers.
+    :feedback_a: The max and len functions can work on any list with types that can be compared.
+    :feedback_b: The max and len functions can work on any list with types that can be compared, but the sum function can only work on lists made of numbers.
 
     True or False? The max, sum, and len functions can work on any list.
 
@@ -47,7 +47,7 @@ First, the program to compute an average without a list:
     total = 0
     count = 0
     while (True):
-        inp = input('Enter a number: ')
+        inp = input('Enter a number or type done to quit: ')
         if inp == 'done': break
         value = float(inp)
         total = total + value
@@ -111,7 +111,7 @@ the numbers in the list to come up with the average.
     :feedback_b: len returns the number of top level items in the list.  It does not count items in sublists.
     :feedback_c: len returns the number of top level items in the list.  It does not count items in sublists.
     :feedback_d: len returns the number of top level items in the list, not the number of brackets.
-    
+
     What is printed by the following statements?
 
 

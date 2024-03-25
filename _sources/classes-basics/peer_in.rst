@@ -2,23 +2,25 @@ Peer Instruction: Classes Multiple Choice Questions
 ---------------------------------------------------
 
 .. mchoice:: ctp-classes-18_Classes_11
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: open_window
    :answer_b: accelerate
    :answer_c: num_wheels
    :answer_d: turn_right
-   :answer_e: I don’t know
+   :answer_e: I don't know
    :correct: c
    :feedback_a: Incorrect! Method describes a specific action associated with a Class. "open_window" is a possbile action.
    :feedback_b: Incorrect! Method describes a specific action associated with a Class. "accelerate" is a possbile action
    :feedback_c: Correct! "num_wheels" is a possible attribute which describes a specific feature.
    :feedback_d: Incorrect! Method describes a specific action associated with a Class. "turn_right" is a possbile action.
    :feedback_e: Incorrect! Method describes a specific action associated with a Class.
-      
-   Which of the following is not a possible method for a Car class?
+
+   Which of the following is not a possible method for a ``Car`` class?
 
 
 .. mchoice:: ctp-classes-18_Classes_15
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 0 0
    :answer_b: 4 0
@@ -31,8 +33,8 @@ Peer Instruction: Classes Multiple Choice Questions
    :feedback_c: Incorrect! Here, p2.x = 0 + 4 = 4 and p2.y = 0.
    :feedback_d: Incorrect! Here, p2.x = 0 + 4 = 4 and p2.y = 0.
    :feedback_e: Incorrect! Here, p2.x = 0 + 4 = 4 and p2.y = 0.
-     
-   What is the output of this code?
+
+   What does this code output?
 
    .. code-block:: python
 
@@ -51,20 +53,21 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_5
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: do_it(d, e, f)
    :answer_b: do_it(self, d, e, f)
    :answer_c: do_it(t, d, e, f)
    :answer_d: t.do_it(d, e, f)
    :answer_e: t.do_it(t, d, e, f)
-   :correct: e
-   :feedback_a: Incorrect! 
-   :feedback_b: Incorrect!
-   :feedback_c: Incorrect!
-   :feedback_d: Incorrect!
-   :feedback_e: Correct!
-      
-   t is an object of class Thing and d, e, and f are defined. What is the proper way to call do_it?
+   :correct: d
+   :feedback_a: Incorrect! You call a method using dot notation.
+   :feedback_b: Incorrect! You call a method using dot notation.
+   :feedback_c: Incorrect! You call a method using dot notation.
+   :feedback_d: Correct! Use dot notation on the object to call a method.
+   :feedback_e: Incorrect! Use dot notation and this will implicitly pass in the object as the first item, you don't also pass it in explicitly.
+
+   If ``t`` is an object of class ``Thing`` and ``d``, ``e``, and ``f`` are defined, what is the proper way to call ``do_it``?
 
    .. code-block:: python
 
@@ -75,6 +78,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_7
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: 20
    :answer_b: [20]
@@ -82,13 +86,13 @@ Peer Instruction: Classes Multiple Choice Questions
    :answer_d: [22]
    :answer_e: I don't know
    :correct: d
-   :feedback_a: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].  
-   :feedback_b: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22]. 
-   :feedback_c: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22]. 
-   :feedback_d: Correct! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22]. 
-   :feedback_e: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22]. 
-     
-   What is the output of this code?
+   :feedback_a: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].
+   :feedback_b: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].
+   :feedback_c: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].
+   :feedback_d: Correct! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].
+   :feedback_e: Incorrect! Here, a = 4, b = 5 and self.val = a*b = 20. So, '[' + str(20 + 2) + ']' = [22].
+
+   What does this code output?
 
    .. code-block:: python
 
@@ -98,13 +102,14 @@ Peer Instruction: Classes Multiple Choice Questions
             self.val = a * b
 
          def __str__(self):
-            return ’[’ + str(self.val + 2) + ’]’
+            return '[' + str(self.val + 2) + ']'
 
       t = Thing(4, 5)
       print(t)
 
 
 .. mchoice:: ctp-methods-19_Methods_9
+   :author: Cynthia Taylor
    :practice: T
    :answer_a: Account(50) == Account(50)
    :answer_b: Account(80) == Account(90)
@@ -117,8 +122,8 @@ Peer Instruction: Classes Multiple Choice Questions
    :feedback_c: Correct! Account(0) assigns 0 to self.gold and Account(5) assigns 5 to other.gold. So, the return statement evaluates to True.
    :feedback_d: Incorrect! Account(0) assigns 0 to self.gold and and when called again assigns 0 to other.gold too. So, the return statement evaluates to False (True and False).
    :feedback_e: Incorrect! Account(0) assigns 0 to self.gold and Account(5) assigns 5 to other.gold. So, the return statement evaluates to True.
-     
-   What is the output of this code?
+
+   What does this code output?
 
    .. code-block:: python
 
@@ -130,11 +135,12 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_12
+   :author: Cynthia Taylor
    :practice: T
 
-   Which code for __ne__ is correct?
+   Which code for ``__ne__`` is correct?
 
-   -   
+   -
        ::
 
          def __ne__(self, p):
@@ -142,15 +148,15 @@ Peer Instruction: Classes Multiple Choice Questions
 
        +   Correct! self == p calls "__eq__". So, it essentially returns self != p.
 
-   -   
+   -
        ::
 
          def __ne__(self, p):
             return self.x == p.x and self.y == p.y
 
-       -   Incorrect! It would return the opposite. 
+       -   Incorrect! It would return the opposite.
 
-   -   
+   -
        ::
 
          def __ne__(self, p):
@@ -166,11 +172,12 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_13
+   :author: Cynthia Taylor
    :practice: T
 
    We want the point closer to the origin to be the lesser point. Which code is correct?
 
-   -   
+   -
        ::
 
          def __lt__(self, p):
@@ -180,7 +187,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
        -   Incorrect! Consider negative numbers as well. For instance, (self.x = -1) > (p.x = -5) but self.x is near closer to the origin.
 
-   -   
+   -
        ::
 
          def __lt__(self, p):
@@ -190,7 +197,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
        +   Correct! This option uses magnitude and thus the relation stands true for negative numbers as well.
 
-   -   
+   -
        ::
 
          def __lt__(self, p):
@@ -200,7 +207,7 @@ Peer Instruction: Classes Multiple Choice Questions
                return True
             return False
 
-       + Correct! The equation "math.sqrt(x**2 + y**2)" measures the absolute distance of point (x, y) from (0, 0). 
+       + Correct! The equation "math.sqrt(x**2 + y**2)" measures the absolute distance of point (x, y) from (0, 0).
 
    -   I don't know
 
@@ -208,11 +215,12 @@ Peer Instruction: Classes Multiple Choice Questions
 
 
 .. mchoice:: ctp-methods-19_Methods_14
+   :author: Cynthia Taylor
    :practice: T
 
-   Which implementation for <= is correct?
+   Which implementation for ``(__le__)`` is correct?
 
-   -   
+   -
        ::
 
          def __le__(self, p):
@@ -222,7 +230,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
        +  Correct! self < p will invoke "__lt__" and self == p will invoke "__eq__"
 
-   -   
+   -
        ::
 
          def __le__(self, p):
@@ -232,7 +240,7 @@ Peer Instruction: Classes Multiple Choice Questions
 
        -  Incorrect! This will lead to erroneous results in case of negative co-ordinates.
 
-   -   
+   -
        ::
 
          def __le__(self, p):

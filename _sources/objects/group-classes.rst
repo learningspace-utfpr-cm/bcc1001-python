@@ -16,14 +16,14 @@ Students will know and be able to do the following.
 *Content Objectives:*
 
 * Identify the parts of a class
-* Explain what a constructor is and what it does
+* Explain what a constructor (initializer) is and what it does
 * Explain what the __str__ method does
 * Explain the difference(s) between a function and method.
 * Create new objects and name them
 * Create new methods
 
 Look the code below.  It defines a class.  it also declares *methods* which are functions that are defined inside of a class.
-One of the methods is automatically called when a new object is created by the class.  One of the methods is automatically
+One of the methods is automatically called everytime a new object is created by the class.  One of the methods is automatically
 called when you print an object of the class.
 
 
@@ -65,9 +65,9 @@ Look at the class definition.  It starts with the keyword ``class``.  Then answe
 
 .. fillintheblank:: class_fitb_book_init
 
-    What is the name of the method that is called when the object is created?
+    What is the name of the method in the example above that is always called when an object is created?
 
-    - :__init__: Good job!  The __init__ method is called when an object is created.
+    - :__init__: Good job!  The __init__ method is always called when an object is created.
       :init: Almost.  The method name includes underscores.
       :.*: This method initializes the object's attributes
 
